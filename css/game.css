@@ -1,0 +1,43 @@
+/* Grid Layout */
+.grid {
+  display: grid;
+  width: 100%;
+  max-width: 800px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  margin: 100px auto;
+}
+
+/* Cards style */
+.card {
+  aspect-ratio: 3/4;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  transition: all 400ms ease;
+  transform-style: preserve-3d;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 2px solid #39813a;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+}
+
+.front {
+  background-image: url(../images/beth.png);
+  transform: rotateY(180deg);
+}
+
+.back {
+  background-image: url(../images/back.png);
+  backface-visibility: hidden;
+}
