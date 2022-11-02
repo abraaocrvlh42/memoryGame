@@ -1,6 +1,8 @@
 // Script to create the animation of the cards
 
 const grid = document.querySelector('.grid')
+const spanPlayer = document.querySelector('.player')
+const timer = document.querySelector('.timer')
 
 // Character array
 const characters = [
@@ -31,7 +33,8 @@ const checkEndGame = () => {
   const disabledCards = document.querySelectorAll('.disabled-card')
 
   if (disabledCards.length === 20) {
-    alert('Congratulations, you won.')
+    clearInterval(this.loop)
+    alert(`Congratulations ${spanPlayer.innerHTML}, your time was ${timer.innerHTML} seconds`)
   }
 }
 
@@ -105,4 +108,19 @@ const loadGame = () => {
   })
 }
 
-loadGame()
+const startTimer = () => {
+  this.loop = setInterval( () => {
+    const currentTimer = Number(timer.innerHTML)
+    timer.innerHTML = currentTimer + 1
+  }, 1000)
+}
+
+window.onload = () => {
+  
+  const playerName = localStorage.getItem('player')
+
+  spanPlayer.innerHTML = playerName
+
+  startTimer()
+  loadGame()
+}
