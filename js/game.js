@@ -3,7 +3,19 @@
 const grid = document.querySelector('.grid')
 
 const card = [
-  
+  'back',
+  'beth',
+  'bg',
+  'brain',
+  'jerry',
+  'jessica',
+  'meeseeks',
+  'morty',
+  'pessoa-passaro',
+  'pickle-rick',
+  'rick',
+  'scroopy',
+  'summer'
 ]
 
 const createElement = (tag, className) => {
