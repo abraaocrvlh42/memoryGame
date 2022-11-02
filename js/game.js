@@ -108,6 +108,7 @@ const loadGame = () => {
   })
 }
 
+// Game timer function
 const startTimer = () => {
   this.loop = setInterval( () => {
     const currentTimer = Number(timer.innerHTML)
@@ -115,6 +116,7 @@ const startTimer = () => {
   }, 1000)
 }
 
+// Function to load the game, only when entering the game page
 window.onload = () => {
   
   const playerName = localStorage.getItem('player')
