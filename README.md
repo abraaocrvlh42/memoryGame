@@ -1,2 +1,2 @@
 # memoryGame
-Memory Game inspired by the Rick and Morty animation using HTML, CSS and JavaScript (Vanill.
+Memory Game inspired by the Rick and Morty animation using HTML, CSS and JavaScript (Vanilla).
